@@ -1,0 +1,655 @@
+/* ============================================
+   ROOT VARIABLES
+   ============================================ */
+:root {
+  --ben-black: #000000;
+  --ben-darkbrown: #2f261b;
+  --ben-brown: #7c5035;
+  --ben-sand: #9b8656;
+  --ben-gold: #D4AF37;
+  --ben-brightGold: #FFD700;
+  --ben-terracotta: #c66445;
+}
+
+
+/* ============================================
+   RESET & BASE
+   ============================================ */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+
+html {
+  scroll-behavior: smooth;
+  font-size: 16px;
+}
+
+
+body {
+  background-color: #000000;
+  color: #ffffff;
+  font-family: 'Space Grotesk', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+  line-height: 1.6;
+  overflow-x: hidden;
+}
+
+
+/* ============================================
+   TYPOGRAPHY
+   ============================================ */
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'Syne', sans-serif;
+  font-weight: 800;
+  line-height: 1.1;
+  margin-bottom: 1.5rem;
+}
+
+
+h1 {
+  font-size: 3.5rem;
+  letter-spacing: -0.02em;
+}
+
+
+h2 {
+  font-size: 2.5rem;
+  letter-spacing: -0.01em;
+}
+
+
+h3 {
+  font-size: 1.75rem;
+}
+
+
+h4 {
+  font-size: 1.5rem;
+}
+
+
+h5 {
+  font-size: 1.25rem;
+}
+
+
+h6 {
+  font-size: 1rem;
+}
+
+
+p {
+  margin-bottom: 1rem;
+  line-height: 1.8;
+  font-size: 1rem;
+  font-family: 'Space Grotesk', sans-serif;
+}
+
+
+a {
+  color: var(--ben-gold);
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+
+a:hover {
+  color: var(--ben-brightGold);
+}
+
+
+/* ============================================
+   GLASS PANEL - CORE COMPONENT
+   ============================================ */
+.glass-panel {
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  background: rgba(47, 38, 27, 0.3);
+  border: 1px solid rgba(214, 154, 101, 0.15);
+  box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.5);
+  border-radius: 16px;
+  transition: all 0.3s ease;
+  padding: 2rem;
+}
+
+
+.glass-panel:hover {
+  background: rgba(47, 38, 27, 0.4);
+  border-color: rgba(214, 154, 101, 0.25);
+  box-shadow: 0 12px 40px 0 rgba(0, 0, 0, 0.7);
+}
+
+
+.glass-card-hover {
+  transition: all 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+  cursor: pointer;
+}
+
+
+.glass-card-hover:hover {
+  background: rgba(47, 38, 27, 0.5) !important;
+  border-color: rgba(214, 154, 101, 0.4) !important;
+  transform: translateY(-8px);
+  box-shadow: 0 20px 50px rgba(0, 0, 0, 0.8);
+}
+
+
+/* ============================================
+   TEXT EFFECTS & STYLING
+   ============================================ */
+.text-glow {
+  text-shadow: 0 0 20px rgba(212, 175, 55, 0.3);
+}
+
+
+.liquid-metal-text {
+  background: linear-gradient(90deg, #9b8656 0%, #FFD700 25%, #D4AF37 50%, #c66445 75%, #9b8656 100%);
+  background-size: 200% auto;
+  color: transparent;
+  -webkit-background-clip: text;
+  background-clip: text;
+  animation: shimmer 4s linear infinite;
+}
+
+
+/* ============================================
+   COLOR UTILITIES
+   ============================================ */
+.text-ben-gold {
+  color: var(--ben-gold);
+}
+
+
+.text-ben-sand {
+  color: var(--ben-sand);
+}
+
+
+.text-ben-terracotta {
+  color: var(--ben-terracotta);
+}
+
+
+.text-ben-brightGold {
+  color: var(--ben-brightGold);
+}
+
+
+.bg-ben-black {
+  background-color: var(--ben-black);
+}
+
+
+.bg-ben-darkbrown {
+  background-color: var(--ben-darkbrown);
+}
+
+
+.bg-ben-brown {
+  background-color: var(--ben-brown);
+}
+
+
+.bg-ben-sand {
+  background-color: var(--ben-sand);
+}
+
+
+.border-ben-gold {
+  border-color: var(--ben-gold);
+}
+
+
+.border-ben-sand {
+  border-color: var(--ben-sand);
+}
+
+
+.border-ben-terracotta {
+  border-color: var(--ben-terracotta);
+}
+
+
+/* ============================================
+   FORM ELEMENTS
+   ============================================ */
+input,
+textarea,
+select {
+  background-color: rgba(47, 38, 27, 0.4);
+  border: 1px solid rgba(214, 154, 101, 0.2);
+  border-radius: 8px;
+  padding: 0.75rem 1rem;
+  color: #ffffff;
+  font-family: 'Space Grotesk', sans-serif;
+  font-size: 1rem;
+  transition: all 0.3s ease;
+  width: 100%;
+}
+
+
+input::placeholder,
+textarea::placeholder {
+  color: rgba(155, 134, 86, 0.5);
+}
+
+
+input:focus,
+textarea:focus,
+select:focus {
+  outline: none;
+  border-color: var(--ben-gold);
+  background-color: rgba(47, 38, 27, 0.6);
+  box-shadow: 0 0 0 3px rgba(212, 175, 55, 0.2);
+}
+
+
+textarea {
+  resize: vertical;
+  min-height: 120px;
+}
+
+
+label {
+  display: block;
+  margin-bottom: 0.5rem;
+  font-weight: 600;
+  font-size: 0.95rem;
+  color: var(--ben-sand);
+}
+
+
+/* ============================================
+   BUTTONS - PREMIUM STYLE
+   ============================================ */
+.btn,
+button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  border-radius: 8px;
+  padding: 0.75rem 2rem;
+  text-decoration: none;
+  transition: all 0.25s ease-in-out;
+  font-size: 1rem;
+  font-weight: 600;
+  font-family: 'Space Grotesk', sans-serif;
+  cursor: pointer;
+  border: none;
+}
+
+
+.btn-primary {
+  background-color: var(--ben-gold);
+  color: #000000;
+}
+
+
+.btn-primary:hover {
+  background-color: var(--ben-brightGold);
+  transform: translateY(-2px);
+}
+
+
+.btn-primary:active {
+  transform: translateY(0);
+}
+
+
+.btn-premium {
+  box-shadow: inset 0 0 0 1px black, 
+              0 0 0 2px #3a3d40,
+              0 0 0 4px rgba(0, 0, 0, 0.25), 
+              0 11px 27px -5px rgba(0, 0, 0, 0.53),
+              0 25px 25px -4px rgba(0, 0, 0, 0.35);
+  background-image: radial-gradient(227.71% 180.23% at 90.64% 130.38%, rgb(17, 20, 23) 0%, rgb(55, 59, 63) 100%),
+                    radial-gradient(207.84% 121.69% at -5.69% 111.39%, rgb(17, 20, 23) 0%, rgb(55, 59, 63) 100%),
+                    linear-gradient(206deg, rgba(123, 134, 151, 0.2) 0%, rgba(25, 27, 30, 0.2) 100%),
+                    linear-gradient(180deg, rgba(0, 0, 0, 0.2) 0%, rgba(0, 0, 0, 0.2) 100%);
+}
+
+
+.btn-premium span {
+  background-image: linear-gradient(69deg, #d1d1d1 0%, #828282 100%);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+
+.btn-premium:hover {
+  transform: translateY(-2px);
+  box-shadow: inset 0 0 0 1px black, 
+              0 0 0 2px #3a3d40,
+              0 0 0 4px rgba(0, 0, 0, 0.25), 
+              0 15px 35px -5px rgba(0, 0, 0, 0.6),
+              0 30px 30px -4px rgba(0, 0, 0, 0.4);
+}
+
+
+.btn-premium:active {
+  transform: translateY(2px);
+  box-shadow: inset 0 0 0 1px black, 
+              0 0 0 2px #3a3d40,
+              0 0 0 4px rgba(0, 0, 0, 0.25), 
+              0 4px 12px -5px rgba(0, 0, 0, 0.53),
+              0 6px 6px -4px rgba(0, 0, 0, 0.35);
+}
+
+
+.btn-premium:active span {
+  background-image: linear-gradient(69deg, #dbd56e 0%, #edeab5 100%);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+
+.btn-premium:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+  transform: none;
+}
+
+
+.btn-premium-secondary {
+  background-image: radial-gradient(227.71% 180.23% at 90.64% 130.38%, rgb(30, 25, 20) 0%, rgb(70, 60, 50) 100%),
+                    radial-gradient(207.84% 121.69% at -5.69% 111.39%, rgb(30, 25, 20) 0%, rgb(70, 60, 50) 100%),
+                    linear-gradient(206deg, rgba(155, 134, 86, 0.2) 0%, rgba(47, 38, 27, 0.2) 100%),
+                    linear-gradient(180deg, rgba(0, 0, 0, 0.2) 0%, rgba(0, 0, 0, 0.2) 100%);
+}
+
+
+.btn-premium-secondary span {
+  background-image: linear-gradient(69deg, #FFD700 0%, #D4AF37 100%);
+}
+
+
+.btn-premium-secondary:active span {
+  background-image: linear-gradient(69deg, #FFF4A3 0%, #FFD700 100%);
+}
+
+
+/* ============================================
+   SCROLLBAR
+   ============================================ */
+::-webkit-scrollbar {
+  width: 10px;
+  height: 10px;
+}
+
+
+::-webkit-scrollbar-track {
+  background: #1a1a1a;
+}
+
+
+::-webkit-scrollbar-thumb {
+  background: #7c5035;
+  border-radius: 5px;
+}
+
+
+::-webkit-scrollbar-thumb:hover {
+  background: #c66445;
+}
+
+
+/* ============================================
+   ANIMATIONS
+   ============================================ */
+@keyframes shimmer {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+
+@keyframes float {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-10px); }
+}
+
+
+@keyframes heroPan {
+  0% { transform: scale(1.2) translate(0, 0); }
+  25% { transform: scale(1.18) translate(-2%, 1%); }
+  50% { transform: scale(1.15) translate(-3%, -2%); }
+  75% { transform: scale(1.13) translate(1%, -1%); }
+  100% { transform: scale(1.2) translate(0, 0); }
+}
+
+
+@keyframes mainBlock {
+  0% { width: 0%; left: 0; }
+  50% { width: 100%; left: 0; }
+  100% { width: 0; left: 100%; }
+}
+
+
+@keyframes secBlock {
+  0% { width: 0%; left: 0; }
+  50% { width: 100%; left: 0; }
+  100% { width: 0; left: 100%; }
+}
+
+
+@keyframes popIn {
+  0% { width: 0px; height: 0px; background: #e9d856; opacity: 0; }
+  50% { width: 10px; height: 10px; background: #e9d856; opacity: 1; }
+  100% { width: 7px; height: 7px; background: #e9d856; }
+}
+
+
+.animate-shimmer {
+  animation: shimmer 3s ease infinite;
+}
+
+
+.animate-float {
+  animation: float 6s ease-in-out infinite;
+}
+
+
+.animate-hero-pan {
+  animation: heroPan 15s ease-in-out infinite;
+}
+
+
+/* ============================================
+   SPACING & LAYOUT
+   ============================================ */
+.container-custom {
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 0 1.5rem;
+  width: 100%;
+}
+
+
+.section-spacing {
+  padding: 4rem 1.5rem;
+}
+
+
+.gap-responsive {
+  gap: 2rem;
+}
+
+
+/* ============================================
+   UTILITIES
+   ============================================ */
+.transition-smooth {
+  transition: all 0.3s ease;
+}
+
+
+.gradient-warm {
+  background: linear-gradient(135deg, #d69a65, #c66445, #7c5035);
+}
+
+
+.gradient-earth {
+  background: linear-gradient(135deg, #9b8656, #7c5035, #2f261b);
+}
+
+
+.no-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+
+
+.no-scrollbar {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+
+/* ============================================
+   FORM STATES
+   ============================================ */
+.form-error {
+  color: #ff6b6b;
+  font-size: 0.875rem;
+  margin-top: 0.25rem;
+}
+
+
+.form-success {
+  color: #51cf66;
+  font-size: 0.875rem;
+  margin-top: 0.25rem;
+}
+
+
+/* ============================================
+   ACCESSIBILITY
+   ============================================ */
+:focus-visible {
+  outline: 2px solid var(--ben-gold);
+  outline-offset: 2px;
+}
+
+
+button:focus-visible,
+a:focus-visible,
+input:focus-visible,
+textarea:focus-visible {
+  outline: 2px solid var(--ben-gold);
+  outline-offset: 2px;
+}
+
+
+/* ============================================
+   RESPONSIVE - TABLET
+   ============================================ */
+@media (max-width: 1024px) {
+  h1 {
+    font-size: 2.75rem;
+  }
+
+
+  h2 {
+    font-size: 2rem;
+  }
+
+
+  h3 {
+    font-size: 1.5rem;
+  }
+
+
+  .section-spacing {
+    padding: 3rem 1.5rem;
+  }
+}
+
+
+/* ============================================
+   RESPONSIVE - MOBILE
+   ============================================ */
+@media (max-width: 768px) {
+  h1 {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+  }
+
+
+  h2 {
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+  }
+
+
+  h3 {
+    font-size: 1.25rem;
+  }
+
+
+  p {
+    font-size: 0.95rem;
+  }
+
+
+  .btn,
+  button {
+    padding: 0.65rem 1.5rem;
+    font-size: 0.9rem;
+  }
+
+
+  .section-spacing {
+    padding: 2rem 1rem;
+  }
+
+
+  .glass-panel {
+    padding: 1.5rem;
+  }
+}
+
+
+/* ============================================
+   RESPONSIVE - SMALL MOBILE
+   ============================================ */
+@media (max-width: 480px) {
+  h1 {
+    font-size: 1.75rem;
+  }
+
+
+  h2 {
+    font-size: 1.3rem;
+  }
+
+
+  h3 {
+    font-size: 1.1rem;
+  }
+
+
+  p {
+    font-size: 0.9rem;
+  }
+
+
+  .btn,
+  button {
+    padding: 0.6rem 1.2rem;
+    font-size: 0.85rem;
+  }
+
+
+  .section-spacing {
+    padding: 1.5rem 0.75rem;
+  }
+
+
+  .container-custom {
+    padding: 0 0.75rem;
+  }
+}
