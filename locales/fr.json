@@ -1,0 +1,126 @@
+{
+  "nav": {
+    "brand": "REN.FM",
+    "home": "Accueil",
+    "episodes": "Épisodes",
+    "team": "Équipe",
+    "blog": "Blog",
+    "contact": "Contact",
+    "subscribe": "Abonnez-vous maintenant"
+  },
+  "hero": {
+    "title_prefix": "Amplifier les",
+    "title_highlight": "voix noires",
+    "tagline": "Des conversations qui inspirent. Des histoires qui comptent.",
+    "description": "Rejoignez-nous pour explorer la croissance, la culture et l'innovation dans le service public.",
+    "cta_listen": "Commencer l'écoute",
+    "cta_team": "Rencontrer l'équipe"
+  },
+  "episodes": {
+    "title": "Derniers épisodes",
+    "view_all": "Voir tout",
+    "page_title": "Tous les épisodes",
+    "page_subtitle": "Plongez dans nos archives de conversations.",
+    "search_placeholder": "Rechercher des épisodes, des invités...",
+    "filter_all": "Tous les tags",
+    "download_title": "Télécharger les transcriptions",
+    "loading": "Chargement des épisodes...",
+    "no_results": "Aucun épisode trouvé correspondant à vos critères.",
+    "error_load": "Impossible de charger les épisodes",
+    "error_msg": "Veuillez vérifier votre connexion internet ou réessayer plus tard.",
+    "tags": {
+      "Mental Health": "Santé mentale",
+      "Public Service": "Service public",
+      "Experience": "Expériences",
+      "Resilience": "Résilience"
+    },
+    "descriptions": {
+      "desc_4": "Dionne etais la coprésidente du REN en 2024. Notre conférencière parlera de son expérience dans le service public.",
+      "desc_3": "Notre conférencière parlera de son expérience dans le service public.",
+      "desc_2": "Notre conférencière parlera de son expérience dans la fonction publique. L'importance de la gestion de la santé mentale dans ce contexte.",
+      "desc_1": "Notre conférencière reviendra sur 10 ans d'expérience et de résilience dans le service public."
+    }
+  },
+  "team": {
+    "title_prefix": "Rencontrez notre",
+    "title_highlight": "équipe",
+    "description": "L'équipe dévouée derrière le micro, qui travaille chaque jour pour amplifier les voix des employés noirs d'aujourd'hui et de demain.",
+    "loading": "Chargement de l'équipe..."
+  },
+  "blog": {
+    "title": "Blog communautaire",
+    "subtitle": "Histoires du réseau",
+    "coming_soon": "Bientôt disponible",
+    "description": "Nous préparons des histoires pour notre lancement. Restez à l'écoute."
+  },
+  "contact": {
+    "title": "Contactez-nous",
+    "subtitle": "Vous avez une histoire à partager ou souhaitez collaborer ?",
+    "email_label": "Envoyez-nous un e-mail",
+    "connect_label": "Connectez-vous",
+    "connect_text": "Suivez-nous sur LinkedIn et les réseaux internes pour les événements à venir.",
+    "form": {
+      "name": "Nom",
+      "email": "Email",
+      "subject": "Sujet",
+      "message": "Message",
+      "submit": "Envoyé Message",
+      "sending": "Envoi...",
+      "success": "Message envoyé !",
+      "error": "Erreur d'envoi",
+      "required_name": "Le nom est requis",
+      "required_email": "L'email est requis",
+      "required_subject": "Le sujet est requis",
+      "required_message": "Le message est requis"
+    }
+  },
+  "subscribe": {
+    "title": "Restez connecté",
+    "subtitle": "Rejoignez notre communauté pour être informé(e) des nouveaux épisodes, événements et reportages.",
+    "welcome": "Bienvenue à bord !",
+    "success_msg": "Vous êtes abonné avec succès à la newsletter du podcast REN.",
+    "form": {
+      "full_name": "Nom complet",
+      "email": "Adresse email",
+      "role": "RÔLE / AFFILIATION",
+      "region": "Région",
+      "consent": "J'accepte de recevoir les newsletters et les mises à jour du podcast REN. Je comprends que je peux me désabonner à tout moment.",
+      "submit": "S'abonner",
+      "processing": "Traitement...",
+      "role_placeholder": "Sélectionnez un rôle...",
+      "region_placeholder": "Sélectionnez une région...",
+      "roles": {
+        "public_servant": "Fonctionnaire",
+        "private_sector": "Secteur privé",
+        "non_profit": "OBNL / ONG",
+        "student": "Étudiant",
+        "other": "Autre"
+      },
+      "regions": {
+        "canada": "Canada",
+        "usa": "États-Unis",
+        "international": "International"
+      }
+    }
+  },
+  "footer": {
+    "brand": "Podcast BEN",
+    "tagline": "Amplifier les voix, partager les histoires et construire une communauté au sein du service public.",
+    "navigate": "NAVIGATION",
+    "legal": "JURIDIQUE",
+    "terms": "Conditions générales",
+    "privacy": "Politique de confidentialité",
+    "subscribe_title": "S'abonner",
+    "subscribe_text": "Rejoignez notre communauté pour recevoir les derniers épisodes, événements et perspectives directement dans votre boîte de réception.",
+    "subscribe_btn": "S'abonner maintenant",
+    "copyright": "Le Podcast BEN. Tous droits réservés."
+  },
+  "newsletter_section": {
+    "title": "Rejoindre la communauté",
+    "description": "Abonnez-vous pour être informé des nouveaux épisodes, des événements communautaires et du contenu en coulisses directement dans votre boîte de réception.",
+    "list_1": "Newsletter mensuelle avec contenu sélectionné",
+    "list_2": "Accès anticipé aux inscriptions aux événements",
+    "list_3": "Mises à jour exclusives de l'équipe",
+    "btn": "S'abonner maintenant"
+  }
+}

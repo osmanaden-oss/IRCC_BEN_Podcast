@@ -1,0 +1,126 @@
+{
+  "nav": {
+    "brand": "BEN.FM",
+    "home": "Home",
+    "episodes": "Episodes",
+    "team": "Team",
+    "blog": "Blog",
+    "contact": "Contact",
+    "subscribe": "Subscribe Now"
+  },
+  "hero": {
+    "title_prefix": "Amplifying",
+    "title_highlight": "Black Voices",
+    "tagline": "Conversations that inspire. Stories that matter.",
+    "description": "Join us as we explore growth, culture, and innovation within the public service.",
+    "cta_listen": "Start Listening",
+    "cta_team": "Meet the Team"
+  },
+  "episodes": {
+    "title": "Latest Episodes",
+    "view_all": "View All",
+    "page_title": "All Episodes",
+    "page_subtitle": "Dive into our archive of conversations.",
+    "search_placeholder": "Search episodes, guests...",
+    "filter_all": "All Tags",
+    "download_title": "Download Transcripts",
+    "loading": "Loading episodes...",
+    "no_results": "No episodes found matching your criteria.",
+    "error_load": "Unable to load episodes",
+    "error_msg": "Please check your internet connection or try again later.",
+    "tags": {
+      "Mental Health": "Mental Health",
+      "Public Service": "Public Service",
+      "Experience": "Experience",
+      "Resilience": "Resilience"
+    },
+    "descriptions": {
+      "desc_4": "Dionne was the co-chair for BEN in 2024. Our speaker will talk about her experience at public service. ",
+      "desc_3": "Our speaker will talk about her experience at public service.",
+      "desc_2": "Our speaker will talk about her experience at public service. The importance of mental health management in that environment.",
+      "desc_1": "Our speaker will go over 10 years of experience and resilience in public service."
+    }
+  },
+  "team": {
+    "title_prefix": "Meet our",
+    "title_highlight": "Team",
+    "description": "The dedicated team behind the microphone, working everyday to amplify black employees voices of today and tomorrow.",
+    "loading": "Loading team..."
+  },
+  "blog": {
+    "title": "Community Blog",
+    "subtitle": "Stories from the network.",
+    "coming_soon": "Coming Soon",
+    "description": "We are curating stories for our launch. Stay tuned."
+  },
+  "contact": {
+    "title": "Get In Touch",
+    "subtitle": "Have a story to share or want to collaborate?",
+    "email_label": "Email Us",
+    "connect_label": "Connect",
+    "connect_text": "Follow us on LinkedIn and internal networks for upcoming events.",
+    "form": {
+      "name": "Name",
+      "email": "Email",
+      "subject": "Subject",
+      "message": "Message",
+      "submit": "Send Message",
+      "sending": "Sending...",
+      "success": "Message Sent!",
+      "error": "Error Sending",
+      "required_name": "Name is required",
+      "required_email": "Email is required",
+      "required_subject": "Subject is required",
+      "required_message": "Message is required"
+    }
+  },
+  "subscribe": {
+    "title": "Stay Connected",
+    "subtitle": "Join our community to receive updates on new episodes, events, and stories.",
+    "welcome": "Welcome Aboard!",
+    "success_msg": "You've successfully subscribed to the BEN Podcast newsletter.",
+    "form": {
+      "full_name": "Full Name",
+      "email": "Email Address",
+      "role": "ROLE / AFFILIATION",
+      "region": "Region",
+      "consent": "I consent to receive newsletters and updates from The BEN Podcast. I understand I can unsubscribe at any time.",
+      "submit": "Subscribe",
+      "processing": "Processing...",
+      "role_placeholder": "Select a role...",
+      "region_placeholder": "Select a region...",
+      "roles": {
+        "public_servant": "Public Servant",
+        "private_sector": "Private Sector",
+        "non_profit": "Non-Profit / NGO",
+        "student": "Student",
+        "other": "Other"
+      },
+      "regions": {
+        "canada": "Canada",
+        "usa": "United States",
+        "international": "International"
+      }
+    }
+  },
+  "footer": {
+    "brand": "BEN Podcast",
+    "tagline": "Amplifying voices, sharing stories, and building community within the public service.",
+    "navigate": "NAVIGATE",
+    "legal": "LEGAL",
+    "terms": "Terms & Conditions",
+    "privacy": "Privacy Policy",
+    "subscribe_title": "Subscribe",
+    "subscribe_text": "Join our community to get the latest episodes, events, and insights delivered to your inbox.",
+    "subscribe_btn": "Subscribe Now",
+    "copyright": "The BEN Podcast. All rights reserved."
+  },
+  "newsletter_section": {
+    "title": "Join the Community",
+    "description": "Subscribe to get notified about new episodes, community events, and behind-the-scenes content directly in your inbox.",
+    "list_1": "Monthly newsletter with curated content",
+    "list_2": "Early access to event registrations",
+    "list_3": "Exclusive updates from the team",
+    "btn": "Subscribe Now"
+  }
+}

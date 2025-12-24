@@ -1,0 +1,281 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>BEN Podcast | Amplifying Black Voices</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&family=Syne:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Lato:300,400|Poppins:300,400,800&display=swap" rel="stylesheet">
+    
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            fontFamily: {
+              sans: ['Space Grotesk', 'sans-serif'],
+              display: ['Syne', 'sans-serif'],
+              lato: ['Lato', 'sans-serif'],
+              poppins: ['Poppins', 'sans-serif'],
+            },
+            colors: {
+              ben: {
+                black: '#000000',
+                darkbrown: '#2f261b',
+                brown: '#7c5035',
+                sand: '#9b8656',
+                gold: '#D4AF37',
+                brightGold: '#FFD700',
+                terracotta: '#c66445',
+              }
+            },
+            backgroundImage: {
+              'gradient-warm': 'linear-gradient(135deg, #d69a65, #c66445, #7c5035)',
+              'gradient-earth': 'linear-gradient(135deg, #9b8656, #7c5035, #2f261b)',
+              'glass-dark': 'linear-gradient(145deg, rgba(47, 38, 27, 0.4), rgba(47, 38, 27, 0.1))',
+            },
+            animation: {
+              'shimmer': 'shimmer 3s ease infinite',
+              'float': 'float 6s ease-in-out infinite',
+              'hero-pan': 'heroPan 15s ease-in-out infinite',
+            },
+            keyframes: {
+              shimmer: {
+                '0%': { backgroundPosition: '0% 50%' },
+                '50%': { backgroundPosition: '100% 50%' },
+                '100%': { backgroundPosition: '0% 50%' },
+              },
+              float: {
+                '0%, 100%': { transform: 'translateY(0)' },
+                '50%': { transform: 'translateY(-10px)' },
+              },
+              heroPan: {
+                '0%': { transform: 'scale(1.2) translate(0, 0)' },
+                '25%': { transform: 'scale(1.18) translate(-2%, 1%)' },
+                '50%': { transform: 'scale(1.15) translate(-3%, -2%)' },
+                '75%': { transform: 'scale(1.13) translate(1%, -1%)' },
+                '100%': { transform: 'scale(1.2) translate(0, 0)' },
+              }
+            }
+          },
+        },
+      }
+    </script>
+    <style>
+      body {
+        background-color: #000000;
+        color: #ffffff;
+        overflow-x: hidden;
+      }
+      
+      .glass-panel {
+        backdrop-filter: blur(12px);
+        -webkit-backdrop-filter: blur(12px);
+        background: rgba(47, 38, 27, 0.3);
+        border: 1px solid rgba(214, 154, 101, 0.15);
+        box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.5);
+      }
+
+      .glass-card-hover:hover {
+        background: rgba(47, 38, 27, 0.5);
+        border-color: rgba(214, 154, 101, 0.4);
+        transform: translateY(-4px);
+        transition: all 0.3s ease;
+      }
+
+      ::-webkit-scrollbar {
+        width: 8px;
+      }
+      ::-webkit-scrollbar-track {
+        background: #2f261b;
+      }
+      ::-webkit-scrollbar-thumb {
+        background: #7c5035;
+        border-radius: 4px;
+      }
+      ::-webkit-scrollbar-thumb:hover {
+        background: #c66445;
+      }
+
+      .text-glow {
+        text-shadow: 0 0 20px rgba(212, 175, 55, 0.3);
+      }
+      
+      .liquid-metal-text {
+        background: linear-gradient(to right, #9b8656, #FFD700, #c66445, #9b8656);
+        background-size: 200% auto;
+        color: transparent;
+        -webkit-background-clip: text;
+        background-clip: text;
+        animation: shimmer 4s linear infinite;
+      }
+      
+      .box .main-block,
+      .box .sec-block {
+        width: 0%;
+        height: inherit;
+        position: absolute;
+        left: 0;
+      }
+
+      .box .main-block {
+        background: #ffb510;
+        animation: mainBlock 2s cubic-bezier(.74,.06,.4,.92) forwards;
+        display: flex;
+      }
+
+      .box .sec-block {
+        background: #7c5035;
+        animation: secBlock 2s cubic-bezier(.74,.06,.4,.92) forwards;
+        animation-delay: 2s;
+        display: flex;
+      }
+
+      .box .title h2 .circle {
+        width: 0px; 
+        height: 0px; 
+        border-radius: 50%;
+        background: #ffb510;
+        position: absolute; 
+        bottom: 13px; 
+        right: -12px;
+        animation: popIn 0.8s cubic-bezier(.74,.06,.4,.92) forwards;
+        animation-delay: 2s;
+      }
+
+      @keyframes mainBlock {
+        0% { width: 0%; left: 0; }
+        50% { width: 100%; left: 0; }
+        100% { width: 0; left: 100%; }
+      }
+      
+      @keyframes secBlock {
+        0% { width: 0%; left: 0; }
+        50% { width: 100%; left: 0; }
+        100% { width: 0; left: 100%; }
+      }
+      
+      @keyframes mainFadeIn {
+        0% { opacity: 0; }
+        100% { opacity: 1; }
+      }
+      
+      @keyframes popIn {
+        0% { width: 0px; height: 0px; background: #e9d856; border: 0px solid #ddd; opacity: 0; }
+        50% { width: 10px; height: 10px; background: #e9d856; opacity: 1; bottom: 45px; }
+        65% { width: 7px; height: 7px; bottom: 0px; width: 15px; }
+        80% { width: 10px; height: 10px; bottom: 20px; }
+        100% { width: 7px; height: 7px; background: #e9d856; border: 0px solid #222; bottom: 13px; }
+      }
+      
+      @keyframes secFadeIn {
+        0% { opacity: 0; }
+        100% { opacity: 0.5; }
+      }
+
+      /* Premium 3D Button Styles */
+      .btn-premium {
+        display: flex;
+        place-items: center;
+        justify-content: center;
+        border-radius: 0.75em;
+        padding: 0.75rem 2rem;
+        width: auto;
+        min-width: 180px;
+        text-decoration: none;
+        transition: all 0.25s ease-in-out;
+        box-shadow: inset 0 0 0 1px black, 
+                    0 0 0 2px #3a3d40,
+                    0 0 0 4px rgba(0, 0, 0, 0.25), 
+                    0 11px 27px -5px rgba(0, 0, 0, 0.53),
+                    0 25px 25px -4px rgba(0, 0, 0, 0.35);
+        background-image: radial-gradient(227.71% 180.23% at 90.64% 130.38%, rgb(17, 20, 23) 0%, rgb(55, 59, 63) 100%),
+                          radial-gradient(207.84% 121.69% at -5.69% 111.39%, rgb(17, 20, 23) 0%, rgb(55, 59, 63) 100%),
+                          linear-gradient(206deg, rgba(123, 134, 151, 0.2) 0%, rgba(25, 27, 30, 0.2) 100%),
+                          linear-gradient(180deg, rgba(0, 0, 0, 0.2) 0%, rgba(0, 0, 0, 0.2) 100%);
+        cursor: pointer;
+        border: none;
+      }
+
+      .btn-premium span {
+        font-size: 1rem;
+        background-image: linear-gradient(69deg, #d1d1d1 0%, #828282 100%);
+        background-clip: text;
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        font-weight: 400;
+        text-shadow: 0 2px 1px rgba(0, 0, 0, 0.125);
+        transition: all 0.25s ease-in-out;
+        font-family: 'Space Grotesk', sans-serif;
+      }
+
+      .btn-premium:active {
+        transform: translateY(2px);
+        box-shadow: inset 0 0 0 1px black, 
+                    0 0 0 2px #3a3d40,
+                    0 0 0 4px rgba(0, 0, 0, 0.25), 
+                    0 4px 12px -5px rgba(0, 0, 0, 0.53),
+                    0 6px 6px -4px rgba(0, 0, 0, 0.35);
+        transition: all 0.25s ease-in-out;
+      }
+
+      .btn-premium:active span {
+        background-image: linear-gradient(69deg, #dbd56e 0%, #edeab5 100%);
+        background-clip: text;
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+      }
+
+      .btn-premium:hover {
+        transform: translateY(-2px);
+        box-shadow: inset 0 0 0 1px black, 
+                    0 0 0 2px #3a3d40,
+                    0 0 0 4px rgba(0, 0, 0, 0.25), 
+                    0 15px 35px -5px rgba(0, 0, 0, 0.6),
+                    0 30px 30px -4px rgba(0, 0, 0, 0.4);
+      }
+
+      .btn-premium-secondary {
+        background-image: radial-gradient(227.71% 180.23% at 90.64% 130.38%, rgb(30, 25, 20) 0%, rgb(70, 60, 50) 100%),
+                          radial-gradient(207.84% 121.69% at -5.69% 111.39%, rgb(30, 25, 20) 0%, rgb(70, 60, 50) 100%),
+                          linear-gradient(206deg, rgba(155, 134, 86, 0.2) 0%, rgba(47, 38, 27, 0.2) 100%),
+                          linear-gradient(180deg, rgba(0, 0, 0, 0.2) 0%, rgba(0, 0, 0, 0.2) 100%);
+      }
+
+      .btn-premium-secondary span {
+        background-image: linear-gradient(69deg, #FFD700 0%, #D4AF37 100%);
+      }
+
+      .btn-premium-secondary:active span {
+        background-image: linear-gradient(69deg, #FFF4A3 0%, #FFD700 100%);
+      }
+
+      @media (max-width: 640px) {
+        .btn-premium {
+          padding: 0.6rem 1.5rem;
+          min-width: 150px;
+        }
+        .btn-premium span {
+          font-size: 0.9rem;
+        }
+      }
+    </style>
+    <script type="importmap">
+{
+  "imports": {
+    "react": "https://aistudiocdn.com/react@^19.2.0",
+    "react/": "https://aistudiocdn.com/react@^19.2.0/",
+    "lucide-react": "https://aistudiocdn.com/lucide-react@^0.554.0",
+    "react-dom/": "https://aistudiocdn.com/react-dom@^19.2.0/",
+    "react-router-dom": "https://aistudiocdn.com/react-router-dom@^7.9.6",
+    "@supabase/supabase-js": "https://aistudiocdn.com/@supabase/supabase-js@^2.84.0",
+    "@tanstack/react-query": "https://aistudiocdn.com/@tanstack/react-query@^5.90.10",
+    "react-hook-form": "https://aistudiocdn.com/react-hook-form@^7.66.1"
+  }
+}
+    </script>
+  </head>
+  <body>
+    <div id="root"></div>
+  </body>
+</html>

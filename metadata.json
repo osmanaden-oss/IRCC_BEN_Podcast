@@ -1,0 +1,7 @@
+{
+  "name": "BEN Afrofuturistic Podcast",
+  "description": "A modern, Afrofuturistic podcast platform for the Black Employee Network at IRCC featuring audio streaming, team bios, and community connection.",
+  "requestFramePermissions": [
+    "microphone"
+  ]
+}
