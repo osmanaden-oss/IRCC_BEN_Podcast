@@ -22,7 +22,7 @@ export default defineConfig(({ mode }) => {
     css: {
       postcss: './postcss.config.js',
     },
-    build: {  // ← ADD THIS SECTION
+    build: {
       target: 'esnext',
       rollupOptions: {
         input: './index.html',
