@@ -6,11 +6,11 @@ export default defineConfig(({ mode }) => {
   const env = loadEnv(mode, process.cwd(), '')
   
   return {
+    plugins: [react()],
     server: {
       port: 3000,
       host: '0.0.0.0',
     },
-    plugins: [react()],
     define: {
       'process.env.GEMINI_API_KEY': JSON.stringify(env.GEMINI_API_KEY || ''),
     },
@@ -23,9 +23,12 @@ export default defineConfig(({ mode }) => {
       postcss: './postcss.config.js',
     },
     build: {
-      target: 'esnext',
+      ssr: false,  // ← DISABLE SSR
+      target: 'es2020',
       rollupOptions: {
-        input: './index.html',
+        input: {
+          main: path.resolve(__dirname, 'index.html'),
+        },
       },
     },
   }
